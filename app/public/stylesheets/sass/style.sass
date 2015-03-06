@@ -1,0 +1,190 @@
+@import "bourbon/bourbon"
+@import "neat/neat"
+@import "_accordion"
+@import "_combobox"
+
+@include font-face(simplifica, "/fonts/SIMPLIFICA")
+
+
+html 
+	background-color: #fff
+
+	a 
+		text-decoration: none
+
+	body
+		// font-family: "Roboto", sans-serif
+		// font-family: $helvetica
+
+		#top-nav
+			width: 100%
+			background: #f5f5f5
+			.inner
+				@include outer-container
+				.logo
+					@include span-columns(9)
+					font-family: "simplifica"
+					text-align: left
+					font-size: 3em
+					color: #298EC3
+					font-weight: 300
+					line-height: 0.9em
+					padding-top: 7px
+
+				.profile
+					@include span-columns(2)
+					display: inline-block
+					float: right
+					.name
+						line-height: 50px
+						vertical-align: top
+						color: #555
+						// text-shadow: 1px 2px 3px rgba(0,0,0,0.3)
+					.avatar
+						width: 35px 
+						height: auto
+						border-radius: 100px
+						margin: 7px 0 0 10px
+		#content
+			@include outer-container
+			.left-nav
+				@include span-columns(2.5)
+				ul 
+					margin: 10px 0
+					@include transition(all 4.0s)
+					li 
+						list-style: none
+						margin: 20px 0
+						a
+							border-left: 3px solid #fff
+							padding: 3px 0 0 15px
+							opacity: 0.6
+							line-height: 4em
+							display: inline-block
+							width: 100%
+							&:hover
+								background: #f5f5f5
+						&.active
+							opacity: 1
+							text-shadow: 1px 2px 3px rgba(0,0,0,0.2)
+							font-weight: bold
+							a
+								border-left: 3px solid #D5EEFB
+						i 
+							font-size: 3em
+							border: 2px solid #aaa
+							color: #aaa
+							padding: 5px
+
+						.name
+							line-height: 65px
+							vertical-align: top
+							color: #555
+							font-size: 0.8em
+							margin-left: 10px
+
+			.ng-view-class
+				@include span-columns(8)
+				padding: 20px
+
+		#basic-user-info
+			.field
+				@include outer-container
+				label 
+					@include span-columns(4)
+					margin-right: 5px
+					font-size: 0.8em
+					margin: 8px
+					color: #888
+				input
+					@include span-columns(5)
+					line-height: 1.8em
+					border: 1px solid #eee
+					outline: none
+					&:focus
+						box-shadow: 0 0 5px rgba(81, 203, 238, 1)
+
+		// .intro
+		// 	text-align: center
+		// .project
+		// 	text-align: center
+		// 	color: grey
+		// 	font-size: 0.8em
+		// 	font-family: $verdana
+		// .keywords
+		// 	text-align: center
+		// 	color: grey
+		// 	font-size: 0.8em
+		// 	font-family: $verdana
+		// 	a 
+		// 		margin: 0 10px 0 10px
+
+
+
+		// section
+
+		// 	@include outer-container
+		// 	$mobile: new-breakpoint(max-width 500px 4)
+		// 	.social
+		// 		@include span-columns(5)
+		// 		@include media($mobile)
+		// 			@include span-columns(4)
+		// 			text-align: center
+		// 		text-align: left
+		// 		padding: 3.5em 20px 0 0
+		// 		color: gray
+		// 		a 
+		// 			margin: 0 10px 0 10px
+		// 			cursor: pointer
+		// 			opacity: 0.3
+		// 			&:hover
+		// 				opacity: 0.6
+		// 	.avatar
+		// 		@include span-columns(2)
+		// 		@include media($mobile)
+		// 			@include span-columns(4)
+		// 		text-align: center
+		// 		opacity: 0.7
+		// 		img
+		// 			height: 140px
+		// 			width: auto
+		// 			border-radius: 100px
+		// 			text-align: center
+		// 	.name 
+		// 		@include span-columns(5)
+		// 		@include media($mobile)
+		// 			@include span-columns(4)
+		// 			text-align: center
+		// 		// font-size: 2em
+		// 		font-family: "simplifica"
+		// 		color: #888
+		// 		padding: 0 0 0 20px
+		// 		text-align: right
+
+			
+		// 	.line-behind-text
+		// 		@include span-columns(12)
+		// 		border-bottom: 1px solid #cacaca
+		// 		text-align: center
+		// 		margin-bottom: 4.5em
+		// 		h6 
+		// 			background: white
+		// 			color: gray
+		// 			display: inline-block
+		// 			font-family: "simplifica", sans-serif
+		// 			font-size: 2em
+		// 			font-weight: 500
+		// 			padding: 0 10px
+		// 			position: relative
+		// 			text-transform: uppercase
+		// 			top: 34px
+		// 			margin-bottom: 0.3em
+		// 	p 
+		// 		a 
+		// 			text-decoration: none
+		// 			opacity: 0.5
+		// 			display: inline-block
+		// 			font-family: $verdana
+		// 			font-size: 1em
+		// 			font-weight: 500
+

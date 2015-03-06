@@ -1,0 +1,32 @@
+extends includes/layout
+
+block content
+	div#top-nav
+		.inner
+			.logo Mitel
+			.profile(ng-controller='profileCtrl') 
+				span.name.fs-body-1 {{::user.name}}
+				img.avatar(ng-src='{{::user.avatar}}')
+
+	div#content
+		div.left-nav(ng-controller='leftNavCtrl')
+			ul
+				li(ng-repeat='tab in options', ng-class="{active:isActive('/{{::tab.link}}')}")
+					a(href='#{{::tab.link}}')
+						i.icon.icon--circled.mdi(class='mdi-{{::tab.icon}}')
+						span.name {{::tab.name}}
+
+		div.ng-view-class
+			div#mitel(ng-view)
+
+
+
+block scripts
+	//- 
+	//- 
+	//- script(src='/javascripts/googleAnalytics.js')
+	script(src="/main.js")
+	script(src='/javascripts/app.js')
+	script(src='/javascripts/controller.js')
+	script(src='/javascripts/user-accordion-directive.js')
+	script(src='/javascripts/user-combobox-directive.js')

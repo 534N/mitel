@@ -1,0 +1,9 @@
+.user-cbb
+	.control
+		.input 
+			input(ng-model='filterText')
+		.toggle(ng-click='toggle()')
+			i.mdi(ng-class="arrowClass()")
+	.content(ng-if='showContent')
+		ul
+			li(ng-repeat='item in data | filter:filterText') {{item}}

@@ -1,0 +1,4 @@
+div#users
+	user-accordion-group
+		user-accordion-pane(ng-repeat='obj in options', title="{{obj.name}}")
+			user-accordion-body(template='{{obj.template}}')

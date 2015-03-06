@@ -1,0 +1,61 @@
+.user-cbb
+	@include outer-container
+	color: #555
+	.control
+		@include span-columns(12)
+		.input
+			@include span-columns(6)
+			margin-right: 0
+
+			input 
+				width: 100%
+				line-height: 2em
+				border: 1px solid #eee
+				outline: none
+				padding-left: 10px
+				&:focus
+					border-bottom: 1px solid #26C6CF
+		.toggle
+			@include span-columns(1)
+			font-size: 1.2em
+			line-height: 1.6em
+			padding: 4px 0 0 10px
+			border: 1px solid #eee
+			border-left: 0
+			cursor: pointer
+			border-radius: 0 3px 3px 0
+			&:hover
+				background: #f5f5f5
+				.mdi
+					color: #000
+			.mdi
+				color: #555
+	.content
+		@include span-columns(12)
+		ul
+			@include span-columns(6)
+			list-style: none
+			margin-left: 0
+			padding: 10px 5px
+			border: 1px solid #eee
+			border-top: 0
+			font-size: 0.9em
+			line-height: 1.3em
+			li 
+				padding: 5px
+				&:hover
+					background: #f5f5f5
+		&.ng-enter
+			@include transition(linear all 1s)
+			max-height: 0
+			opacity: 0
+			&.ng-enter-active
+				max-height: 999px
+				opacity: 1
+		&.ng-leave
+			@include transition(linear all 0s)
+			max-height: 999px
+			opacity: 1
+			&.ng-leave-active
+				max-height: 0
+				opacity: 1
